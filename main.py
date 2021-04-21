@@ -22,7 +22,11 @@ async def startup_event():
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "CCSolutions.io says hello!"}
+
+@app.get("/helloworld")
+async def root():
+    return {"message": "Hello World!"}
 
 if __name__ == "__main__":
     uvicorn.run("main:app", host="0.0.0.0", port=8000, log_level="info", reload=False)
